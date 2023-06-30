@@ -30,3 +30,6 @@ app.get ('/perro', function(req, res) {
     let bernerspath = path.resolve(__dirname, './Material/berners-lee.html');  //resuelve el error de ruta absoluta, indicar --dirname, ruta del archivo
     res.sendFile(bernerspath)   // llamo a la variable q resolvio la ruta
 })
+
+app.use(express.static('public'))
+
